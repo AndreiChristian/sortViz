@@ -1,0 +1,39 @@
+.toc {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* top: 0; */
+
+  height: 100vh;
+  height: 100dvh;
+
+
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+
+}
+
+.toc li {
+  margin: 0;
+  font-weight: bold;
+}
+
+.toc div:nth-last-child(1) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toc div svg {
+  stroke: var(--text);
+  fill: var(--text);
+}

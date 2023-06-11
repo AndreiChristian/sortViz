@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Teko:wght@300&display=swap");
+
 body,
 html {
   margin: 0;
@@ -6,6 +8,11 @@ html {
 
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -33,6 +40,6 @@ button {
 }
 
 svg {
-  width: clamp(30px, 5vh, 50px);
-  height: clamp(30px, 5vh, 50px);
+  width: clamp(15px, 5vh, 30px);
+  height: clamp(15px, 5vh, 50px);
 }

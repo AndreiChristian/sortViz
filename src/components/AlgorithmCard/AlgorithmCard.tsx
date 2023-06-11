@@ -8,7 +8,7 @@ import ActionBar from "../ActionBar/ActionBar";
 const AlgorithmCard = ({ name, sort, description }: Algorithm) => {
   const [min, setMin] = useState<number>(30);
   const [max, setMax] = useState<number>(100);
-  const [length, setLength] = useState<number>(150);
+  const [length, setLength] = useState<number>(500);
 
   const [delay, setDelay] = useState<number>(1);
 
