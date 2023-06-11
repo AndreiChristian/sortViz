@@ -7,8 +7,5 @@
   justify-content: flex-start;
   flex-direction: column;
   padding: 2vh;
-  outline: 1px solid #ccc;
   border-radius: 20px;
 }
-
-

@@ -5,12 +5,12 @@ import AlgorithmDisplay from "../AlgorithmDisplay/AlgorithmDisplay";
 import { useState } from "react";
 import ActionBar from "../ActionBar/ActionBar";
 
-const AlgorithmCard = ({ name, sort }: Algorithm) => {
+const AlgorithmCard = ({ name, sort, description }: Algorithm) => {
   const [min, setMin] = useState<number>(30);
   const [max, setMax] = useState<number>(100);
-  const [length, setLength] = useState<number>(100);
+  const [length, setLength] = useState<number>(150);
 
-  const [delay, setDelay] = useState<number>(30);
+  const [delay, setDelay] = useState<number>(1);
 
   const [array, setArray] = useState<number[]>(
     createRandomArray(length, min, max)
@@ -26,12 +26,16 @@ const AlgorithmCard = ({ name, sort }: Algorithm) => {
         setArray={setArray}
         setSelectedIndices={setSelectedIndices}
         sort={sort}
+        max={max}
+        min={min}
+        length={length}
       />
       <AlgorithmDisplay
         array={array}
         max={max}
         selectedIndeces={selectedIndices}
       />
+      <p>{description}</p>
     </div>
   );
 };

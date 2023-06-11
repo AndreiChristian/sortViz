@@ -5,7 +5,16 @@
   width: 100%;
 }
 
-.row svg {
-  color: var(--primary);
-  stroke: var(--primary);
+svg {
+  color: var(--text);
+  stroke: var(--text);
+  transition: all 0.7s;
+}
+
+.play:hover svg {
+  fill: var(--text);
+}
+
+.restart:hover svg {
+  transform: rotate(1turn);
 }
