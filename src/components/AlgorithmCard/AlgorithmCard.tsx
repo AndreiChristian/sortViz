@@ -15,7 +15,7 @@ const AlgorithmCard = ({ name, sort }: Algorithm) => {
       <h1>{name}</h1>
       <button
         onClick={() => {
-          sort(array, setArray, setSelectedIndices, 100);
+          sort(array, setArray, setSelectedIndices, 10);
         }}
       >
         Sort

@@ -4,7 +4,7 @@ import { algorithms } from "./data/algorithms";
 
 function App() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} `}>
       {algorithms.map((a) => {
         return (
           <AlgorithmCard key={a.id} name={a.name} id={a.id} sort={a.sort} />

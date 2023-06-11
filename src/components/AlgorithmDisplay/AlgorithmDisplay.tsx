@@ -17,7 +17,9 @@ const AlgorithmDisplay: React.FC<Props> = ({ array, max, selectedIndeces }) => {
             className={styles.item}
             style={{
               height: `${(a / max) * 100}%`,
-              backgroundColor: isSelected ? "red" : "white",
+              backgroundColor: isSelected
+                ? "var(--selected-bars)"
+                : "var(--standard-bars)",
             }}
             key={index}
           ></div>
