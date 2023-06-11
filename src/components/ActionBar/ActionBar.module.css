@@ -1,0 +1,11 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.row svg {
+  color: var(--primary);
+  stroke: var(--primary);
+}

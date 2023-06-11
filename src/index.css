@@ -25,3 +25,14 @@ html {
   --standard-bars-dark: #aa86b8;
   --selected-bars-dark: #ff4500;
 }
+
+button {
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+
+svg {
+  width: clamp(30px, 5vh, 50px);
+  height: clamp(30px, 5vh, 50px);
+}
