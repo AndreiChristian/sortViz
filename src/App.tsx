@@ -1,10 +1,14 @@
 import styles from "./App.module.css";
+import AlgorithmCard from "./components/AlgorithmCard/AlgorithmCard";
+import { algorithms } from "./data/algorithms";
 
 function App() {
   return (
-    <>
-      <h1 className={styles.h1}>Bubble sort</h1>
-    </>
+    <div className={styles.container}>
+      {algorithms.map((a) => {
+        return <AlgorithmCard key={a.id} name={a.name} id={a.id} />;
+      })}
+    </div>
   );
 }
 
