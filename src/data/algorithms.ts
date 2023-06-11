@@ -1,15 +1,17 @@
 import React from "react";
 import { bubbleSort } from "./algorithms/bubble";
+import { insertionSort } from "./algorithms/insertion";
+import { selectionSort } from "./algorithms/selection";
 
 export interface Algorithm {
   id: number;
   name: string;
-  sort?: (
+  sort: (
     nums: number[],
     setArray: React.Dispatch<React.SetStateAction<number[]>>,
     setSelectedIndices: React.Dispatch<React.SetStateAction<number[]>>,
     ms: number
-  ) => void;
+  ) => Promise<void>;
 }
 
 export const algorithms: Algorithm[] = [
@@ -18,7 +20,6 @@ export const algorithms: Algorithm[] = [
     name: "Bubble Sort",
     sort: bubbleSort,
   },
-  { id: 2, name: "Merge Sort" },
-  { id: 3, name: "Insertion Sort" },
-  { id: 4, name: "Quick sort" },
+  { id: 2, name: "Insertion Sort", sort: insertionSort },
+  { id: 3, name: "Selection Sort", sort: selectionSort },
 ];

@@ -4,16 +4,21 @@ import styles from "./AlgorithmDisplay.module.css";
 interface Props {
   array: number[];
   max: number;
+  selectedIndeces: number[];
 }
 
-const AlgorithmDisplay: React.FC<Props> = ({ array, max }) => {
+const AlgorithmDisplay: React.FC<Props> = ({ array, max, selectedIndeces }) => {
   return (
     <div className={styles.container}>
       {array.map((a, index) => {
+        const isSelected = selectedIndeces.includes(index);
         return (
           <div
             className={styles.item}
-            style={{ height: `${(a / max) * 100}%` }}
+            style={{
+              height: `${(a / max) * 100}%`,
+              backgroundColor: isSelected ? "red" : "white",
+            }}
             key={index}
           ></div>
         );

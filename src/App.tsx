@@ -6,7 +6,9 @@ function App() {
   return (
     <div className={styles.container}>
       {algorithms.map((a) => {
-        return <AlgorithmCard key={a.id} name={a.name} id={a.id} />;
+        return (
+          <AlgorithmCard key={a.id} name={a.name} id={a.id} sort={a.sort} />
+        );
       })}
     </div>
   );
