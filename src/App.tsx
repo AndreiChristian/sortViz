@@ -1,11 +1,9 @@
-import "./App.css";
-import Bar from "./components/Bar.tsx";
+import styles from "./App.module.css";
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
-      <Bar />
+      <h1 className={styles.h1}>Bubble sort</h1>
     </>
   );
 }
