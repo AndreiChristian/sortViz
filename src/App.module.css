@@ -13,6 +13,7 @@
   min-height: 100dvh;
   overflow-y: scroll;
   overflow-x: hidden;
+  width: 100%;
 
   --background: var(--background-dark);
   --primary: var(--primary-dark);
@@ -31,6 +32,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .light {

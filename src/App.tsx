@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import AlgorithmCard from "./components/AlgorithmCard/AlgorithmCard";
 import Toc from "./components/TOC/Toc";
 import { algorithms } from "./data/algorithms";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -15,6 +16,7 @@ function App() {
     <div className={`${styles.container} ${!darkMode && styles.light}`}>
       <Toc toggleDarkMode={toggleDarkMode} />
       <div className={`${styles.list}  `}>
+        <Hero />
         {algorithms.map((a) => {
           return (
             <AlgorithmCard
@@ -23,6 +25,7 @@ function App() {
               name={a.name}
               id={a.id}
               sort={a.sort}
+              tags={a.tags}
             />
           );
         })}

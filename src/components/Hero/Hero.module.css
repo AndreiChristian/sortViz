@@ -1,0 +1,26 @@
+.card {
+  width: 90vw;
+  height: 90vh;
+  height: 90dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10vw;
+  margin-bottom: 10vh;
+}
+
+.card h1 {
+  font-size: 5rem;
+}
+
+.card p, .card span {
+  font-size: 1.5rem;
+}
+
+
+
+.card a {
+  border-bottom: 1px solid;
+  border-color: inherit;
+}

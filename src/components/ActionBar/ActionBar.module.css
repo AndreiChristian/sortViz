@@ -1,8 +1,22 @@
 .row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
+  gap: 2vh;
+  flex-wrap: wrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.row span {
+  color: var(--background);
+  background-color: var(--text);
+  padding: 1vh;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 svg {
@@ -17,4 +31,10 @@ svg {
 
 .restart:hover svg {
   transform: rotate(1turn);
+}
+
+@media (max-width: 1000px) {
+  .row span {
+    display: none;
+  }
 }

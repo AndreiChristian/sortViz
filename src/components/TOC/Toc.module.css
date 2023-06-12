@@ -35,11 +35,15 @@
   fill: var(--text);
 }
 
-
-
 .action button.selected {
   background-color: var(--text);
   color: var(--background);
   /* color: red; */
   border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  .toc {
+    display: none;
+  }
 }

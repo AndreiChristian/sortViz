@@ -17,6 +17,7 @@ interface Props {
   min: number;
   max: number;
   length: number;
+  tags: string[];
 }
 
 const ActionBar: React.FC<Props> = ({
@@ -29,10 +30,17 @@ const ActionBar: React.FC<Props> = ({
   min,
   max,
   length,
+  tags,
 }) => {
   return (
     <div className={styles.row}>
       <h1>{name}</h1>
+
+      {tags.map((t) => {
+        return <span>{t}</span>;
+      })}
+
+      <div className={styles.spacer}></div>
 
       <button
         className={styles.play}

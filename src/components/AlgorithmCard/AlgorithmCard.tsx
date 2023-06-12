@@ -5,7 +5,7 @@ import AlgorithmDisplay from "../AlgorithmDisplay/AlgorithmDisplay";
 import { useState } from "react";
 import ActionBar from "../ActionBar/ActionBar";
 
-const AlgorithmCard = ({ id, name, sort, description }: Algorithm) => {
+const AlgorithmCard = ({ id, name, sort, description, tags }: Algorithm) => {
   const [min, setMin] = useState<number>(30);
   const [max, setMax] = useState<number>(100);
   const [length, setLength] = useState<number>(200);
@@ -29,6 +29,7 @@ const AlgorithmCard = ({ id, name, sort, description }: Algorithm) => {
         max={max}
         min={min}
         length={length}
+        tags={tags}
       />
       <AlgorithmDisplay
         array={array}
