@@ -104,10 +104,24 @@ const Toc: React.FC<Props> = ({ toggleDarkMode }) => {
         <div>
           <h3>WizSort</h3>
         </div>
+        <div className={styles.action}>
+          <h4>Array Size</h4>
+          <button className={styles.selected}>50</button>
+          <button>100</button>
+          <button>200</button>
+        </div>
+        <div className={styles.action}>
+          <h4>Speed</h4>
+          <button className={styles.selected}>x1</button>
+          <button>x2</button>
+          <button>x4</button>
+          <button>x8</button>
+          <h4></h4>
+        </div>
         {algorithms.map((a) => {
           return (
             <li key={a.id}>
-              <a href={`section${a.id}`}>{a.name}</a>
+              <a href={`#section${a.id}`}>{a.name}</a>
             </li>
           );
         })}
