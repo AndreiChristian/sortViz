@@ -93,7 +93,11 @@ export const algorithms = [
   },
 ];
 
-const Toc = () => {
+interface Props {
+  toggleDarkMode: () => void;
+}
+
+const Toc: React.FC<Props> = ({ toggleDarkMode }) => {
   return (
     <>
       <ul className={styles.toc}>
@@ -109,6 +113,7 @@ const Toc = () => {
         })}
         <div>
           <svg
+            onClick={toggleDarkMode}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

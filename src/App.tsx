@@ -1,15 +1,20 @@
+import { useState } from "react";
 import styles from "./App.module.css";
 import AlgorithmCard from "./components/AlgorithmCard/AlgorithmCard";
 import Toc from "./components/TOC/Toc";
 import { algorithms } from "./data/algorithms";
 
 function App() {
-  const dark = true;
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleDarkMode = () => {
+    setDarkMode((value) => !value);
+  };
 
   return (
-    <div className={`${styles.container} ${!dark && styles.light}`}>
-      <Toc />
-      <div className={`${styles.list} {!dark && styles.light} `}>
+    <div className={`${styles.container} ${!darkMode && styles.light}`}>
+      <Toc toggleDarkMode={toggleDarkMode} />
+      <div className={`${styles.list}  `}>
         {algorithms.map((a) => {
           return (
             <AlgorithmCard
