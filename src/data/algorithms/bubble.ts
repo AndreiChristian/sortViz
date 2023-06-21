@@ -17,5 +17,11 @@ export const bubbleSort = async (
       setArray(nums);
     }
   }
-  console.log("Final", ...nums);
+
+  setSelectedIndices([]);
+
+  for (let i = 0; i < nums.length; i++) {
+    setSelectedIndices((value) => [...value, i]);
+    await delay(ms);
+  }
 };

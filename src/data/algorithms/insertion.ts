@@ -30,4 +30,10 @@ export const insertionSort = async (
 
     setArray([...arr]);
   }
+  setSelectedIndices([]);
+
+  for (let i = 0; i < nums.length; i++) {
+    setSelectedIndices((value) => [...value, i]);
+    await delay(ms);
+  }
 };

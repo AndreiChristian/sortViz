@@ -1,6 +1,5 @@
 import { delay } from "../../utils/delay";
 
-
 export const heapSort = async (
   nums: number[],
   setArray: React.Dispatch<React.SetStateAction<number[]>>,
@@ -24,6 +23,11 @@ export const heapSort = async (
   }
 
   setSelectedIndices([]);
+
+  for (let i = 0; i < nums.length; i++) {
+    setSelectedIndices((value) => [...value, i]);
+    await delay(ms);
+  }
 };
 
 async function heapify(

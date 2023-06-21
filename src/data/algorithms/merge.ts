@@ -14,6 +14,11 @@ export const mergeSort = async (
     await mergeSort(nums, setArray, setSelectedIndices, ms, mid + 1, end);
     await merge(nums, start, mid, end, setArray, setSelectedIndices, ms);
   }
+
+  for (let i = 0; i < nums.length; i++) {
+    setSelectedIndices((value) => [...value, i]);
+    await delay(ms);
+  }
 };
 
 async function merge(
@@ -65,4 +70,6 @@ async function merge(
     setArray([...arr]);
     await delay(ms);
   }
+
+  setSelectedIndices([]);
 }

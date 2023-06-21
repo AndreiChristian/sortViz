@@ -25,6 +25,11 @@ export const quickSort = async (
     quickSort(nums, setArray, setSelectedIndices, ms, start, index - 1),
     quickSort(nums, setArray, setSelectedIndices, ms, index + 1, end),
   ]);
+
+  for (let i = 0; i < nums.length; i++) {
+    setSelectedIndices((value) => [...value, i]);
+    await delay(ms);
+  }
 };
 
 async function partition(
@@ -49,6 +54,7 @@ async function partition(
   }
   [arr[pivotIndex], arr[end]] = [arr[end], arr[pivotIndex]]; // Swap values
   setArray([...arr]);
+  setSelectedIndices([]);
   await delay(ms);
   return pivotIndex;
 }
