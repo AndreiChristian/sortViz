@@ -9,6 +9,10 @@ import { radixSort } from "./algorithms/radix";
 import { cocktailSort } from "./algorithms/cocktail";
 import { gnomeSort } from "./algorithms/gnome";
 import { bogoSort } from "./algorithms/bogo";
+import { shellSort } from "./algorithms/shell";
+import { bucketSort } from "./algorithms/bucket";
+import { countingSort } from "./algorithms/counting";
+import { timSort } from "./algorithms/tim";
 
 export interface Algorithm {
   id: number;
@@ -139,6 +143,58 @@ export const algorithms: Algorithm[] = [
       "Average: O(n²)",
       "Worst: O(n²)",
       "Strategy: Insertion",
+    ],
+  },
+  {
+    id: 11,
+    name: "Shell Sort",
+    description:
+      "Shell Sort is a generalized version of insertion sort. It works by sorting pairs of elements far apart from each other and then progressively reducing the gap between elements to be compared. By starting with far apart elements, it can move some out-of-place elements into position faster. It is a comparatively better choice for medium size lists and it offers a good trade-off between program complexity and increased performance.",
+    sort: shellSort,
+    tags: [
+      "Best: O(n log n)",
+      "Average: depends on gap sequence",
+      "Worst: O(n²)",
+      "Strategy: Insertion",
+    ],
+  },
+  {
+    id: 12,
+    name: "Bucket Sort",
+    description:
+      "Bucket Sort is a distribution sorting algorithm that works by distributing the elements of an array into a number of buckets. Each bucket is then sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sort algorithm. It is useful when input is uniformly distributed over a range. Due to its linear time complexity, it can be beneficial when dealing with large data sets.",
+    sort: bucketSort,
+    tags: [
+      "Best: O(n+k)",
+      "Average: O(n+k)",
+      "Worst: O(n²)",
+      "Strategy: Distribution",
+    ],
+  },
+  {
+    id: 13,
+    name: "Counting Sort",
+    description:
+      "Counting Sort is an integer sorting algorithm that works by counting the number of objects that have each distinct key value, and using arithmetic on those counts to determine the positions of each key value in the output sequence. It is not a comparison based sort and runs in linear time making it efficient for lists of numbers over a certain size where the range of input values are not significantly greater than the number of values to be sorted.",
+    sort: countingSort,
+    tags: [
+      "Best: O(n+k)",
+      "Average: O(n+k)",
+      "Worst: O(n+k)",
+      "Strategy: Counting",
+    ],
+  },
+  {
+    id: 14,
+    name: "TimSort",
+    description:
+      "TimSort is a hybrid sorting algorithm, derived from merge sort and insertion sort, designed to perform well on many kinds of real-world data. It uses techniques from the insertion sort and the merge sort to provide stable, efficient sorting of the input list, making it excellent for data sets that are already partially ordered.",
+    sort: timSort,
+    tags: [
+      "Best: O(n)",
+      "Average: O(n log n)",
+      "Worst: O(n log n)",
+      "Strategy: Insertion & Merging",
     ],
   },
   {
