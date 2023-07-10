@@ -26,6 +26,7 @@ function App() {
               id={a.id}
               sort={a.sort}
               tags={a.tags}
+              links={a.links}
             />
           );
         })}

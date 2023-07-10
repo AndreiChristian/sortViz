@@ -25,6 +25,7 @@ export interface Algorithm {
     ms: number
   ) => Promise<void>;
   tags: string[];
+  links?: string[];
 }
 
 export const algorithms: Algorithm[] = [
@@ -39,6 +40,12 @@ export const algorithms: Algorithm[] = [
       "Average: O(n²)",
       "Worst: O(n²)",
       "Strategy: Exchanging",
+    ],
+    links: [
+      "https://github.com/AndreiChristian/sortViz/blob/master/code/bubble/bubble.ts",
+      "https://github.com/AndreiChristian/sortViz/blob/master/code/bubble/bubble.go",
+      "https://github.com/AndreiChristian/sortViz/blob/master/code/bubble/bubble.py",
+      "https://github.com/AndreiChristian/sortViz/blob/master/code/bubble/bubble.dart",
     ],
   },
   {
