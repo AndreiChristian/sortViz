@@ -35,4 +35,7 @@ export const bucketSort = async (
     setSelectedIndices((value) => [...value, i]);
     await delay(ms);
   }
+
+  await delay(ms);
+  setSelectedIndices([]);
 };

@@ -29,4 +29,7 @@ export const gnomeSort = async (
     setSelectedIndices((value) => [...value, i]);
     await delay(ms);
   }
+
+  await delay(3 * ms);
+  setSelectedIndices([]);
 };

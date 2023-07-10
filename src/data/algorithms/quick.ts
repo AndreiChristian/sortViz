@@ -30,6 +30,9 @@ export const quickSort = async (
     setSelectedIndices((value) => [...value, i]);
     await delay(ms);
   }
+
+  await delay(3 * ms);
+  setSelectedIndices([]);
 };
 
 async function partition(

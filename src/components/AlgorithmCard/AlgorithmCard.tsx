@@ -52,7 +52,7 @@ const AlgorithmCard = ({
       />
       <p>{description}</p>
 
-      {links && (
+      {/* {links && (
         <div style={{ alignSelf: "flex-start" }}>
           Code:{" "}
           {links.map((link, index) => {
@@ -73,7 +73,7 @@ const AlgorithmCard = ({
             );
           })}
         </div>
-      )}
+      )} */}
     </div>
   );
 };

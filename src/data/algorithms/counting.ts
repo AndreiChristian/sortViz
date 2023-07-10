@@ -36,4 +36,7 @@ export const countingSort = async (
     setSelectedIndices((value) => [...value, i]);
     await delay(ms);
   }
+
+  await delay(ms);
+  setSelectedIndices([]);
 };
